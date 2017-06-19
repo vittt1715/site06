@@ -65,7 +65,7 @@ $mainGreenColor: #81d742;
     position: absolute;
     height:150px;
     width:1300px;
-    left:0;
+    left:-8rem;
     top:0;
     background: url("../img/Section1_bgImage.jpg");
     background-size:100% 100%;
@@ -80,8 +80,8 @@ $mainGreenColor: #81d742;
       content: '';
       display: block;
       position: absolute;
-      width: 8em;
-      height:8em;
+      width: 7.5em;
+      height:7.5em;
       background-color: #fff;
       border-radius: 50%;
       left:1em;
@@ -771,6 +771,306 @@ $mainGreenColor: #81d742;
   box-shadow: inset 0 0 0 1000px rgba(81,191,234,.85);
 }
 
+.footer {
+  background-color: #222;
+  & .row {
+    position: relative;
+  }
+  overflow: hidden;
+  margin:0 -15px;
+  & .footer_bgImage {
+    position: absolute;
+    height:150px;
+    width:1300px;
+    left:-8rem;
+    top:0;
+    background: url("../img/Section1_bgImage.jpg");
+    background-size:100% 100%;
+    background-repeat:no-repeat;
+  }
+  & .navLogo {
+    position: relative;
+    padding:3rem 2rem 2rem 10rem;
+    height:150px;
+    min-width:300px;
+    &:before {
+      content: '';
+      display: block;
+      position: absolute;
+      width: 7.5em;
+      height:7.5em;
+      background-color: #fff;
+      border-radius: 50%;
+      left:1em;
+      top:4em;
+    }
+    & img {
+      position: absolute;
+      left:1rem;
+      top:4rem;
+    }
+    & .firstRowLogoText {
+      white-space: nowrap;
+      padding-top:2em;
+      & .first {
+        @include logoText(#fff);
+      }
+      & .second {
+        @include logoText($mainGreenColor);
+      }
+      & .third {
+        @include logoText($mainBlueColor);
+      }
+    }
+    & .secondRowLogoText {
+      text-align: left;
+      padding-left:3em;
+      font-family:'Roboto Condensed', sans-serif;
+      font-size:1.2rem;
+      font-weight:300;
+      color: #fff;
+      text-transform: uppercase;
+      letter-spacing:0.4rem;
+
+    }
+  }
+  & .navMenusBottom {
+    background-color: transparent;
+    border-color: transparent;
+    //padding-top:3rem;
+    margin-top:5%;
+    margin-bottom:5%;
+    //float: right;
+    //width:70%;
+    //position: absolute;
+    //right:0;
+    top:40%;
+    overflow: visible;
+    z-index: 3;
+    & .container-fluid {
+      padding-left: 0px;
+      padding-right:0px;
+      & .navbar-header {
+        & .navbar-toggle {
+          transform: translateX(-3rem);
+        }
+      }
+      & .navbar-collapse {
+        padding-left: 0px;
+        padding-right:0px;
+        overflow: visible;
+        //background-color: rgba(55,55,55,1);
+
+        & .nav {
+          width:100%;
+          white-space: nowrap;
+          &>li {
+            text-align: center;
+            position: relative;
+            margin:0 0.5em;
+
+            & .headerSecondDropMenu {
+              opacity:0;
+              z-index: 0;
+              position: absolute;
+              padding:1rem;
+              background-color: $mainGreenColor;
+              top:100%;
+              left:25%;
+              width:50%;
+            }
+            &>a {
+              display: inline-block;
+              padding:0.5rem 0;
+              margin:0 1rem;
+              @include commonTextRoboto(#fff,1.5rem,400);
+              text-transform: uppercase;
+              &:after {
+                content: '';
+                display: block;
+                width:100%;
+                height:2px;
+                background-color: transparent;
+                transition: all 0.6s ease;
+              }
+            }
+          }
+          &>li:hover {
+            &>a:after {
+              background-color: #fff;
+            }
+            &>a {
+              color: $mainGreenColor;
+            }
+            & .headerSecondDropMenu {
+              opacity:1;
+              z-index:2;
+
+              &>li {
+                text-align: left;
+                &>a {
+                  display: block;
+                  padding:0.5rem;
+                  @include commonTextRoboto(#222,1rem,400);
+                  text-transform: none;
+                  text-decoration: none;
+                  &>i {
+                    color: #fff;
+                    display: inline-block;
+                    padding-right: 0.5rem;
+                  }
+                  &:hover {
+                    color: #fff;
+                    &>i {
+                      color: #222;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  & .footer_phones {
+    width:20%;
+    float: right;
+    text-align: right;
+    & .phone {
+      text-wrap: none;
+      //width: 28%;
+      position: relative;
+      padding: 1.5rem 0;
+      margin: 0 1%;
+      text-align: right;
+      cursor: pointer;
+      white-space: nowrap;
+
+      & span {
+        @include commonTextRoboto($mainBlueColor, 1.8rem, 400);
+      }
+      & .fa-long-arrow-up {
+        color: $mainBlueColor;
+        font-size: 1.8rem;
+      }
+      & .fa-long-arrow-down {
+        color: $mainBlueColor;
+        font-size:1.8rem;
+        display: none;
+      }
+      & .phonesDropdown {
+        position: absolute;
+        top: 100%;
+        width: 100%;
+        height: 0px;
+        overflow: hidden;
+        transition: all .5s ease;
+        background-color: $mainBlueColor;
+        cursor: pointer;
+        & > li {
+          & > a {
+            @include commonTextRoboto(#222, 1.8rem, 400);
+            text-decoration: none;
+
+          }
+        }
+
+      }
+      &:hover {
+        & .fa-long-arrow-up {
+          display: none;
+        }
+        & .fa-long-arrow-down {
+          display: inline;
+        }
+
+        & .phonesDropdown {
+          height: 16rem;
+          padding-top: 1rem;
+          border-top: 2px solid #fff;
+
+          & > li {
+            & > a {
+              @include commonTextRoboto(#222, 1.8rem, 400);
+              display: block;
+              padding: 0.5rem;
+
+            }
+          }
+        }
+      }
+    }
+    & .email {
+      text-wrap: none;
+      //width: 28%;
+      position: relative;
+      padding: 1.5rem 0;
+      margin: 0 1%;
+      text-align: right;
+      cursor: pointer;
+      white-space: nowrap;
+
+
+      & span {
+        @include commonTextRoboto($mainGreenColor, 1.8rem, 400);
+      }
+      & .fa-long-arrow-up {
+        color: $mainGreenColor;
+        font-size: 1.8rem;
+      }
+      & .fa-long-arrow-down {
+        color: $mainGreenColor;
+        font-size:1.8rem;
+        display: none;
+      }
+      & .mailDropdown {
+        position: absolute;
+        top: 100%;
+        width: 100%;
+        height: 0px;
+        overflow: hidden;
+        transition: all .5s ease;
+        background-color: $mainGreenColor;
+        cursor: pointer;
+        & > li {
+          & > a {
+            @include commonTextRoboto(#222, 1.8rem, 400);
+            text-decoration: none;
+
+          }
+        }
+
+      }
+      &:hover {
+        & .fa-long-arrow-up {
+          display: none;
+        }
+        & .fa-long-arrow-down {
+          display: inline;
+        }
+
+        & .mailDropdown {
+          height: 16rem;
+          padding-top: 1.8rem;
+          border-top: 2px solid #fff;
+
+          & > li {
+            & > a {
+              @include commonTextRoboto(#222, 1.8rem, 400);
+              display: block;
+              padding: 0.5rem;
+
+            }
+          }
+        }
+      }
+    }
+    & .copyright {
+      @include commonTextRoboto(#999,1.6rem,400);
+    }
+  }
+}
 
 @media screen and (min-width: 1200px) {
   .limitWidth1200 {
@@ -824,3 +1124,11 @@ $mainGreenColor: #81d742;
     }
   }
 };
+@media screen and (max-width: 767px) {
+  .footer {
+    & .footer_phones {
+      width:100%;
+      text-align: center;
+    }
+  }
+}

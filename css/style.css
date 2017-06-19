@@ -47,7 +47,7 @@ body, html, h1, h2, h3, h4, h5, h6, p, a, div {
     position: absolute;
     height: 150px;
     width: 1300px;
-    left: 0;
+    left: -8rem;
     top: 0;
     background: url("../img/Section1_bgImage.jpg");
     background-size: 100% 100%;
@@ -61,8 +61,8 @@ body, html, h1, h2, h3, h4, h5, h6, p, a, div {
       content: '';
       display: block;
       position: absolute;
-      width: 8em;
-      height: 8em;
+      width: 7.5em;
+      height: 7.5em;
       background-color: #fff;
       border-radius: 50%;
       left: 1em;
@@ -594,6 +594,252 @@ body, html, h1, h2, h3, h4, h5, h6, p, a, div {
   background-color: rgba(81, 191, 234, 0.85);
   box-shadow: inset 0 0 0 1000px rgba(81, 191, 234, 0.85); }
 
+.footer {
+  background-color: #222;
+  overflow: hidden;
+  margin: 0 -15px; }
+  .footer .row {
+    position: relative; }
+  .footer .footer_bgImage {
+    position: absolute;
+    height: 150px;
+    width: 1300px;
+    left: -8rem;
+    top: 0;
+    background: url("../img/Section1_bgImage.jpg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat; }
+  .footer .navLogo {
+    position: relative;
+    padding: 3rem 2rem 2rem 10rem;
+    height: 150px;
+    min-width: 300px; }
+    .footer .navLogo:before {
+      content: '';
+      display: block;
+      position: absolute;
+      width: 7.5em;
+      height: 7.5em;
+      background-color: #fff;
+      border-radius: 50%;
+      left: 1em;
+      top: 4em; }
+    .footer .navLogo img {
+      position: absolute;
+      left: 1rem;
+      top: 4rem; }
+    .footer .navLogo .firstRowLogoText {
+      white-space: nowrap;
+      padding-top: 2em; }
+      .footer .navLogo .firstRowLogoText .first {
+        font-family: 'Anton', sans-serif;
+        font-size: 4.8rem;
+        text-transform: uppercase;
+        color: #fff; }
+      .footer .navLogo .firstRowLogoText .second {
+        font-family: 'Anton', sans-serif;
+        font-size: 4.8rem;
+        text-transform: uppercase;
+        color: #81d742; }
+      .footer .navLogo .firstRowLogoText .third {
+        font-family: 'Anton', sans-serif;
+        font-size: 4.8rem;
+        text-transform: uppercase;
+        color: #32b4e6; }
+    .footer .navLogo .secondRowLogoText {
+      text-align: left;
+      padding-left: 3em;
+      font-family: 'Roboto Condensed', sans-serif;
+      font-size: 1.2rem;
+      font-weight: 300;
+      color: #fff;
+      text-transform: uppercase;
+      letter-spacing: 0.4rem; }
+  .footer .navMenusBottom {
+    background-color: transparent;
+    border-color: transparent;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    top: 40%;
+    overflow: visible;
+    z-index: 3; }
+    .footer .navMenusBottom .container-fluid {
+      padding-left: 0px;
+      padding-right: 0px; }
+      .footer .navMenusBottom .container-fluid .navbar-header .navbar-toggle {
+        transform: translateX(-3rem); }
+      .footer .navMenusBottom .container-fluid .navbar-collapse {
+        padding-left: 0px;
+        padding-right: 0px;
+        overflow: visible; }
+        .footer .navMenusBottom .container-fluid .navbar-collapse .nav {
+          width: 100%;
+          white-space: nowrap; }
+          .footer .navMenusBottom .container-fluid .navbar-collapse .nav > li {
+            text-align: center;
+            position: relative;
+            margin: 0 0.5em; }
+            .footer .navMenusBottom .container-fluid .navbar-collapse .nav > li .headerSecondDropMenu {
+              opacity: 0;
+              z-index: 0;
+              position: absolute;
+              padding: 1rem;
+              background-color: #81d742;
+              top: 100%;
+              left: 25%;
+              width: 50%; }
+            .footer .navMenusBottom .container-fluid .navbar-collapse .nav > li > a {
+              display: inline-block;
+              padding: 0.5rem 0;
+              margin: 0 1rem;
+              font-family: "Roboto Condensed", sans-serif;
+              font-size: 1.5rem;
+              color: #fff;
+              font-weight: 400;
+              text-transform: uppercase; }
+              .footer .navMenusBottom .container-fluid .navbar-collapse .nav > li > a:after {
+                content: '';
+                display: block;
+                width: 100%;
+                height: 2px;
+                background-color: transparent;
+                transition: all 0.6s ease; }
+          .footer .navMenusBottom .container-fluid .navbar-collapse .nav > li:hover > a:after {
+            background-color: #fff; }
+          .footer .navMenusBottom .container-fluid .navbar-collapse .nav > li:hover > a {
+            color: #81d742; }
+          .footer .navMenusBottom .container-fluid .navbar-collapse .nav > li:hover .headerSecondDropMenu {
+            opacity: 1;
+            z-index: 2; }
+            .footer .navMenusBottom .container-fluid .navbar-collapse .nav > li:hover .headerSecondDropMenu > li {
+              text-align: left; }
+              .footer .navMenusBottom .container-fluid .navbar-collapse .nav > li:hover .headerSecondDropMenu > li > a {
+                display: block;
+                padding: 0.5rem;
+                font-family: "Roboto Condensed", sans-serif;
+                font-size: 1rem;
+                color: #222;
+                font-weight: 400;
+                text-transform: none;
+                text-decoration: none; }
+                .footer .navMenusBottom .container-fluid .navbar-collapse .nav > li:hover .headerSecondDropMenu > li > a > i {
+                  color: #fff;
+                  display: inline-block;
+                  padding-right: 0.5rem; }
+                .footer .navMenusBottom .container-fluid .navbar-collapse .nav > li:hover .headerSecondDropMenu > li > a:hover {
+                  color: #fff; }
+                  .footer .navMenusBottom .container-fluid .navbar-collapse .nav > li:hover .headerSecondDropMenu > li > a:hover > i {
+                    color: #222; }
+  .footer .footer_phones {
+    width: 20%;
+    float: right;
+    text-align: right; }
+    .footer .footer_phones .phone {
+      text-wrap: none;
+      position: relative;
+      padding: 1.5rem 0;
+      margin: 0 1%;
+      text-align: right;
+      cursor: pointer;
+      white-space: nowrap; }
+      .footer .footer_phones .phone span {
+        font-family: "Roboto Condensed", sans-serif;
+        font-size: 1.8rem;
+        color: #32b4e6;
+        font-weight: 400; }
+      .footer .footer_phones .phone .fa-long-arrow-up {
+        color: #32b4e6;
+        font-size: 1.8rem; }
+      .footer .footer_phones .phone .fa-long-arrow-down {
+        color: #32b4e6;
+        font-size: 1.8rem;
+        display: none; }
+      .footer .footer_phones .phone .phonesDropdown {
+        position: absolute;
+        top: 100%;
+        width: 100%;
+        height: 0px;
+        overflow: hidden;
+        transition: all .5s ease;
+        background-color: #32b4e6;
+        cursor: pointer; }
+        .footer .footer_phones .phone .phonesDropdown > li > a {
+          font-family: "Roboto Condensed", sans-serif;
+          font-size: 1.8rem;
+          color: #222;
+          font-weight: 400;
+          text-decoration: none; }
+      .footer .footer_phones .phone:hover .fa-long-arrow-up {
+        display: none; }
+      .footer .footer_phones .phone:hover .fa-long-arrow-down {
+        display: inline; }
+      .footer .footer_phones .phone:hover .phonesDropdown {
+        height: 16rem;
+        padding-top: 1rem;
+        border-top: 2px solid #fff; }
+        .footer .footer_phones .phone:hover .phonesDropdown > li > a {
+          font-family: "Roboto Condensed", sans-serif;
+          font-size: 1.8rem;
+          color: #222;
+          font-weight: 400;
+          display: block;
+          padding: 0.5rem; }
+    .footer .footer_phones .email {
+      text-wrap: none;
+      position: relative;
+      padding: 1.5rem 0;
+      margin: 0 1%;
+      text-align: right;
+      cursor: pointer;
+      white-space: nowrap; }
+      .footer .footer_phones .email span {
+        font-family: "Roboto Condensed", sans-serif;
+        font-size: 1.8rem;
+        color: #81d742;
+        font-weight: 400; }
+      .footer .footer_phones .email .fa-long-arrow-up {
+        color: #81d742;
+        font-size: 1.8rem; }
+      .footer .footer_phones .email .fa-long-arrow-down {
+        color: #81d742;
+        font-size: 1.8rem;
+        display: none; }
+      .footer .footer_phones .email .mailDropdown {
+        position: absolute;
+        top: 100%;
+        width: 100%;
+        height: 0px;
+        overflow: hidden;
+        transition: all .5s ease;
+        background-color: #81d742;
+        cursor: pointer; }
+        .footer .footer_phones .email .mailDropdown > li > a {
+          font-family: "Roboto Condensed", sans-serif;
+          font-size: 1.8rem;
+          color: #222;
+          font-weight: 400;
+          text-decoration: none; }
+      .footer .footer_phones .email:hover .fa-long-arrow-up {
+        display: none; }
+      .footer .footer_phones .email:hover .fa-long-arrow-down {
+        display: inline; }
+      .footer .footer_phones .email:hover .mailDropdown {
+        height: 16rem;
+        padding-top: 1.8rem;
+        border-top: 2px solid #fff; }
+        .footer .footer_phones .email:hover .mailDropdown > li > a {
+          font-family: "Roboto Condensed", sans-serif;
+          font-size: 1.8rem;
+          color: #222;
+          font-weight: 400;
+          display: block;
+          padding: 0.5rem; }
+    .footer .footer_phones .copyright {
+      font-family: "Roboto Condensed", sans-serif;
+      font-size: 1.6rem;
+      color: #999;
+      font-weight: 400; }
+
 @media screen and (min-width: 1200px) {
   .limitWidth1200 {
     width: 1170px;
@@ -626,3 +872,8 @@ body, html, h1, h2, h3, h4, h5, h6, p, a, div {
           top: 100%;
           left: -25%;
           width: 150%; } }
+
+@media screen and (max-width: 767px) {
+  .footer .footer_phones {
+    width: 100%;
+    text-align: center; } }
